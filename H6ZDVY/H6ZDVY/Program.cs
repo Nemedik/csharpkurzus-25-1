@@ -26,10 +26,9 @@ try
         .ToArray();
 
 
-    for (int i = 0; i < deck.Length; i++)
-    {
-        Console.WriteLine(deck[i].Rank + " of " + deck[i].Suit);
-    }
+    Random rand = new Random();
+    int random = rand.Next(0, 52);
+    Console.WriteLine(deck[random].Rank + " of " + deck[random].Suit + " value: " + deck[random].Value + " is drawn: " + deck[random].Drawn);
 
 }
 catch (Exception ex)

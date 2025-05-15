@@ -13,6 +13,8 @@ public static class Mapper
         {
             Rank = card.Rank,
             Suit = card.Suit,
+            Value = card.Value,
+            Drawn = card.Drawn
         };
     }
 
@@ -21,7 +23,9 @@ public static class Mapper
         return new Card
         {
             Rank = card.Rank,
-            Suit = card.Suit
+            Suit = card.Suit,
+            Value = card.Value,
+            Drawn = card.Drawn
         };
     }
 }

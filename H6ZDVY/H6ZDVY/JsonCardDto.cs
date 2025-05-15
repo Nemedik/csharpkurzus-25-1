@@ -9,4 +9,6 @@ public class JsonCardDto
 {
     public string Rank { get; set; }
     public string Suit { get; set; }
+    public int Value { get; set; }
+    public bool Drawn { get; set; }
 }
