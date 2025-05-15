@@ -25,10 +25,19 @@ try
         .Where(card => card != null)
         .ToArray();
 
-
-    Random rand = new Random();
-    int random = rand.Next(0, 52);
-    Console.WriteLine(deck[random].Rank + " of " + deck[random].Suit + " value: " + deck[random].Value + " is drawn: " + deck[random].Drawn);
+    Console.WriteLine("Would you like to start a round of Blackjack? (Write Y for yes)");
+    string input = Console.ReadLine();
+    if(input == "Y" || input == "y")
+    {
+        Blackjack blackjack = new Blackjack(deck);
+        string teszt = blackjack.teszt();
+        Console.WriteLine(teszt);
+    }
+    else
+    {
+        Console.WriteLine("Goodbye!");
+        Environment.Exit(0);
+    }
 
 }
 catch (Exception ex)
