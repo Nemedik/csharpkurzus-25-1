@@ -30,8 +30,7 @@ try
     if(input == "Y" || input == "y")
     {
         Blackjack blackjack = new Blackjack(deck);
-        string teszt = blackjack.teszt();
-        Console.WriteLine(teszt);
+        blackjack.Game(15000);
     }
     else
     {
