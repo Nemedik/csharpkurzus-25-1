@@ -25,18 +25,8 @@ try
         .Where(card => card != null)
         .ToArray();
 
-    Console.WriteLine("Would you like to start a round of Blackjack? (Write Y for yes)");
-    string input = Console.ReadLine();
-    if(input == "Y" || input == "y")
-    {
-        Blackjack blackjack = new Blackjack(deck);
-        blackjack.Game(15000);
-    }
-    else
-    {
-        Console.WriteLine("Goodbye!");
-        Environment.Exit(0);
-    }
+    Blackjack blackjack = new Blackjack(deck);
+    blackjack.Game(15000);
 
 }
 catch (Exception ex)
